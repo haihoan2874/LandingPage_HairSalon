@@ -1,43 +1,19 @@
 import React from "react";
 
 const galleryItems = [
-  {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    alt: "Tác phẩm 1",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    alt: "Tác phẩm 2",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    alt: "Tác phẩm 3",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    alt: "Tác phẩm 4",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    alt: "Tác phẩm 5",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    alt: "Tác phẩm 6",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    alt: "Tác phẩm 7",
-  },
+  { id: 1, src: "/gallery/TP1.png", alt: "Tác phẩm 1" },
+  { id: 2, src: "/gallery/TP2.png", alt: "Tác phẩm 2" },
+  { id: 3, src: "/gallery/TP3.png", alt: "Tác phẩm 3" },
+  { id: 4, src: "/gallery/TP4.png", alt: "Tác phẩm 4" },
+  { id: 5, src: "/gallery/TP5.png", alt: "Tác phẩm 5" },
+  { id: 6, src: "/gallery/TP6.png", alt: "Tác phẩm 6" },
+  { id: 7, src: "/gallery/TP7.png", alt: "Tác phẩm 7" },
+  { id: 8, src: "/gallery/TP8.png", alt: "Tác phẩm 8" },
+  { id: 9, src: "/gallery/TP9.png", alt: "Tác phẩm 9" },
+  { id: 10, src: "/gallery/TP10.png", alt: "Tác phẩm 10" },
+  { id: 11, src: "/gallery/TP11.png", alt: "Tác phẩm 11" },
+  { id: 12, src: "/gallery/TP12.png", alt: "Tác phẩm 12" },
 ];
-
 const Gallery = () => {
   return (
     <section id="gallery" className="py-20 md:py-32 bg-[#0a0a0a]">
@@ -52,11 +28,14 @@ const Gallery = () => {
           <div className="w-32 h-1 bg-[#F59E0B] mx-auto mt-6 rounded"></div>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 scroll-smooth "
+          style={{ scrollbarWidth: "none" }}
+        >
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="group rounded-lg cursor-pointer break-inside-avoid overflow-hidden"
+              className="shrink-0 snap-center w-[85%] sm:w-[280px] md:w-[350px] h-auto group rounded-lg cursor-pointer border border-[#F59E0B] overflow-hidden"
             >
               <img
                 src={item.src}
@@ -70,7 +49,7 @@ const Gallery = () => {
           <a
             href="https://www.facebook.com/search/top?q=nam%20hairsalon"
             target="_blank"
-            className="flex gap-2 justify-center text-[#F59E0B] font-bold uppercase tracking-widest hover:text-[#d97706] transition-colors duration-300"
+            className="flex gap-2 justify-center text-[#F59E0B] font-bold uppercase tracking-widest hover:text-[#d97706] transition-transform duration-300 transform hover:scale-110"
           >
             Xem thêm trên facebook
             <svg
@@ -79,7 +58,7 @@ const Gallery = () => {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              class="size-6"
+              className="size-6"
             >
               <path
                 strokeLinecap="round"
