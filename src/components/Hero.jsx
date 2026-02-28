@@ -25,12 +25,18 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#F59E0B] hover:bg-[#d97706] text-white text-center px-8 py-4 uppercase tracking-widest font-bold rounded transition transform hover:scale-105 shadow-lg">
+            <a
+              href="#contact"
+              className="bg-[#F59E0B] hover:bg-[#d97706] text-white text-center px-8 py-4 uppercase tracking-widest font-bold rounded transition transform hover:scale-105 shadow-lg"
+            >
               Đặt lịch ngay
-            </button>
-            <button className="border border-white hover:border-[#F59E0B] hover:text-[#F59E0B] px-8 py-4 rounded text-lg uppercase font-bold tracking-wide transition transform ">
+            </a>
+            <a
+              href="#reviews"
+              className="border border-white hover:border-[#F59E0B] hover:text-[#F59E0B] text-center px-8 py-4 rounded text-lg uppercase font-bold tracking-wide transition transform "
+            >
               Xem đánh giá
-            </button>
+            </a>
           </div>
         </div>
       </div>
