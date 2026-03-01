@@ -30,7 +30,7 @@ const Gallery = () => {
 
         <div
           className="flex overflow-x-auto snap-x snap-mandatory gap-6 scroll-smooth "
-          style={{ scrollbarWidth: "none" }}
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {galleryItems.map((item) => (
             <div
